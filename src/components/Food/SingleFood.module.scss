@@ -1,0 +1,74 @@
+.card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    width: 28rem;
+    height: 30rem;
+    overflow: hidden;
+    border-radius: 13px;
+    box-shadow: 1px 0px 6px -2px rgba(49,47,47,0.62);
+}
+
+.card .display {
+    width: 100%;
+    height: 15rem;
+    background-color: black;
+    border-radius: 8px;
+}
+
+.display img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .details {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.7rem;
+    padding-right: 0.2rem;
+    flex: 1 1 0;
+    justify-content: space-between;
+}
+
+.details h3 {
+    margin-top: 1rem;
+    font-size: 1.7rem;
+}
+
+.desc {
+    font-size: 1.1rem;
+    float: left;
+}
+
+.card .order {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.price {
+    margin-top: 5px;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.order button {
+    cursor: pointer;
+    width: 7rem;
+    height: 2.5rem;
+    border: none;
+    color: white;
+    margin-top: .2rem;
+    border-radius: 20px;
+    background-image: linear-gradient(to right,rgb(243, 91, 91),#FA003F);
+}
+
+.order button:hover, .order button:active {
+    background-image: linear-gradient(to right,rgb(212, 81, 81),#f50743);
+}

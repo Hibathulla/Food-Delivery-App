@@ -1,0 +1,21 @@
+.btn {
+    border: none;
+    width: 10rem;
+    height: 4vw;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn1 {
+    font-size: larger;
+    color: white;
+    background-color: #FF3D68;
+}
+
+.btn2 {
+    background-color: #F5FDB0;
+    font-size: larger;
+    font-weight: 600;
+    color: black;
+}

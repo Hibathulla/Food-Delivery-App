@@ -1,0 +1,73 @@
+.home {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba( #f00e0e, 0.39), rgba(#da233b, 0.01));
+    
+    &__content {
+        display: flex;
+    }
+
+    &__left {
+        flex: 1;
+        padding: 7rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__textbox {
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    &__title1 {
+        font-size: 6rem;
+        font-weight: 800;
+        opacity: 80%;
+    }
+
+    &__title2 {
+        font-size: 4rem;
+        font-weight: 600;
+    }
+
+    &__button {
+        text-decoration: none;
+        font-size: 1.7rem;
+        width: 36%;
+        color: #fff;
+        background-color: #DE2B42;
+        padding: 1.3rem 3rem;
+        box-shadow: 0 1rem 2rem rgba(black, 0.15);
+        border-radius: 5rem;
+        margin-top: 5rem;
+        transition: all .2s;    
+
+        &:hover {
+            transform: translateY(-0.2rem);
+            background-image: linear-gradient(to left,(#F41A53), (#DE2B42));
+            box-shadow: 0 .5rem 1rem rgba(black, 0.2);
+        }
+
+        &:active {
+            transform: translate(0);
+            box-shadow: 0 .5rem 1rem rgba(black, 0.2);
+        }
+    }
+
+    &__right {
+        flex: 1;
+        padding: 10rem;
+        object-fit: contain;
+        position: relative;
+    }
+
+    &__food {
+        width: auto;
+        height: auto; 
+        object-fit: cover; 
+        position: absolute;
+        top: 0;
+        right: 10;
+    }
+}
