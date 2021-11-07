@@ -2,7 +2,7 @@ import { useContext } from "react";
 import CartItems from "./CartItems";
 import FoodContext from "../../store/food-context";
 
-import classes from "./Cart.module.css";
+import classes from "./Cart.module.scss";
 
 const Cart = () => {
 
@@ -16,10 +16,15 @@ ctx.addItem({...item, amount: 1})
 
   return (
     <section className={classes.cart}>
-    <h1>Shopping Cart</h1>
-    <div className={classes.underline}></div>
-    <div className={classes.ul}>
-    {ctx.items.map(item => (
+    <div className={classes.cart__top}>
+      <h2 className={classes.cart__heading}>Shopping Cart</h2>
+    </div>
+    <div className={classes.cart__bottom}>
+      <CartItems />
+    </div>
+
+
+    {/* {ctx.items.map(item => (
       <li><CartItems
       id={item.id}
       key={item.id}
@@ -29,12 +34,7 @@ ctx.addItem({...item, amount: 1})
       amount={item.amount}
       onAdd={onAddHandler.bind(null, item)}
        /></li>
-    ))}
-    </div>
-    <div className={classes.bottom}>
-    <button className={classes.clearCart} onClick={ctx.clearCart}><strong>Clear Cart</strong></button>
-    <h2>Total Amount: {ctx.amount}</h2>
-    </div>
+    ))} */}
     </section>
   );
 };

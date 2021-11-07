@@ -1,0 +1,15 @@
+.items {
+    width: 95%;
+    height: 10rem;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 2px solid rgba(#333, 0.3);
+
+    &__imagebox {
+        float: left;
+        width: 7rem;
+        height: 7rem;
+        background-color: orangered;
+    }
+}

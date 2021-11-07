@@ -1,5 +1,5 @@
 import Card from "../UI/Card";
-import classes from "./CartItems.module.css"
+import classes from "./CartItems.module.scss"
 import { useContext } from "react";
 import FoodContext from "../../store/food-context";
 
@@ -12,23 +12,14 @@ const CartItems = (props) => {
   }
 
     return (
-        <Card className={classes.item}>
+        <div className={classes.items}>
+            <div className={classes.items__imagebox}>
 
-        <div className={classes.first}>
-          <div className={classes.image}><img alt={props.Food} src={props.Food} /></div>
-          <h3>{props.name}</h3>
-        </div>
+            </div>
+            <h4>Pancakes</h4>
 
-        <div className={classes.second}>
-         <div className={classes.amount}>
-           <button>-</button>
-           <div>{props.amount}</div>
-           <button onClick={props.onAdd}>+</button>
-         </div>
-         <div className={classes.price}>${props.price}</div>
-         <button className={classes.trash} onClick={removeHandler}><img src="https://img.icons8.com/material-outlined/24/000000/trash--v2.png" alt="cart" /></button>
+            <div className={classes.items__quantity}></div>
         </div>
-      </Card>
     )
 }
 

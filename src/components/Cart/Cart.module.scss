@@ -1,0 +1,28 @@
+.cart {
+    width: 80%;
+    height: 90vh;
+    margin: 0 auto;
+    border-radius: 14px;
+
+    &__top {
+        width: 100%;
+        height: 20rem;
+        background-image: linear-gradient(to top left, rgba( #f00e0e, 0.3), rgba(#da233b, .8));
+        text-align: center;
+        padding: 3rem 2rem;
+    }
+
+    &__heading {
+        color: white;
+        font-size: 3.5rem;
+    }
+
+    &__bottom {
+        width: 90%;
+        height: 35rem;
+        padding: 2rem;
+        background-color: #FEF5ED;
+        margin: -9rem auto 0 auto;
+        border-radius: 10px;
+    }
+}

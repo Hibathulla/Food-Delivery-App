@@ -1,8 +1,13 @@
 {
-    "folders": [],
-    "settings": {
-        "emmet.includeLanguages": {
-           "javascript": "javascriptreact"
-        }
-     }
-}
+  "emmet.excludeLanguages": [
+  
+    "markdown"
+  ],
+    "emmet.includeLanguages": {
+  
+      "javascript": "javascriptreact",
+      "javascript": "html"
+    },
+    "emmet.triggerExpansionOnTab": true,
+"files.associations": {"*html":"html"}
+  }

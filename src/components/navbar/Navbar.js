@@ -19,8 +19,8 @@ const Navbar = () => {
         </div>
         <nav>
             <ul className={classes.nav__ul}>
-                <li><a>Home</a></li>
-                <li><a>Category</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#category">Category</a></li>
                 <li><a>Menu</a></li>
                 <li><a>Footer</a></li>
             </ul>

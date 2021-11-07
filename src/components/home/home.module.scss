@@ -1,6 +1,6 @@
 .home {
     height: 100vh;
-    background-image: linear-gradient(to bottom, rgba( #f00e0e, 0.39), rgba(#da233b, 0.01));
+    background-image: linear-gradient(to bottom left, rgba( #f00e0e, 0.1), rgba(#da233b, 0));
     
     &__content {
         display: flex;
@@ -58,16 +58,16 @@
     &__right {
         flex: 1;
         padding: 10rem;
-        object-fit: contain;
         position: relative;
     }
 
     &__food {
-        width: auto;
-        height: auto; 
-        object-fit: cover; 
+        width: 80%;
+        // width: auto;
+        // height: auto; 
+        // object-fit: cover; 
         position: absolute;
         top: 0;
-        right: 10;
+        right: 10rem;
     }
 }

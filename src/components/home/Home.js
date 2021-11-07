@@ -9,7 +9,7 @@ const Home = (props) => {
       props.homeHandler(true)
   }
 
-  return <section className={classes.home}>
+  return <section className={classes.home} id="home">
   <Navbar />
   <div className={classes.home__content}>
       <div className={classes.home__left}>

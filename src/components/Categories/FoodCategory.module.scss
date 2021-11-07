@@ -46,19 +46,33 @@
 
 .category {
   padding: 5rem 6rem;
+  text-align: center;
+  background-image: linear-gradient(to top, rgba( #f00e0e, 0.1), rgba(#da233b, 0));
 
-  &__lists {
-    text-align: center;
+  &__headingbox {
+    display: block;
+    padding: 1rem 4rem;
+  }
+
+  &__heading {
+    font-size: 3rem;
+    background-image: linear-gradient(to left,#FF9292, #F03861);
+    background-clip: text;
+    color: transparent;
   }
 
   &__box {
-    width: 15rem;
-    height: 15rem;
+    display: inline-block flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    width: 20rem;
+    height: 5rem;
+    background-color: #FAFAFA;
     text-align: center;
     border-radius: 7px;
-    // padding: 1rem 0;
-    box-shadow: 0 2rem 4rem rgba(black, .15);
-    display: inline-block;
+    border: none;
+    box-shadow: 0 1rem 4rem rgba(black, .14);
     transition: all .3s;
 
     &:not(:last-child) {
@@ -68,30 +82,19 @@
     &:hover {
       cursor: pointer;
       transform: translateY(-.3rem);
+      background-image: linear-gradient(to left,#FF9292, #FF5151);
+      color: white;
     }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }  
+
+  &__name {
+    font-size: 1.9rem;
+    font-weight: 500;
   }
 
-  &__imagebox {
-    width: 5rem;
-    height: 5rem;
-    background: #000;
-    background-size: cover;
-    margin: 0 auto;
-  }
-
-  &__image {
-    background-size: cover;
-  }
-
-  &__text {
-    font-size: 1.7rem;
-    font-weight: bold;
-    margin-bottom: .1rem;
-  }
-
-  &__box:hover &__text {
-    color: #DE2B42;
-    transform: scale(1.1);
-  }
 }
 
