@@ -14,11 +14,20 @@ const CartItems = (props) => {
     return (
         <div className={classes.items}>
             <div className={classes.items__imagebox}>
-
+                <img className={classes.items__img} src={props.img} alt="" />
             </div>
-            <h4>Pancakes</h4>
 
-            <div className={classes.items__quantity}></div>
+            <div className={classes.items__textbox}>
+            <h4 className={classes.items__title}>{props.name}</h4>
+            <h3 className={classes.items__titleprice}>${props.price}</h3>
+            </div>
+           
+
+            <div className={classes.items__quantity}>
+                <button className={classes.items__btnplus}>+</button>
+                <div className={classes.items__number}>1</div>
+                <button className={classes.items__btnminus}>-</button>
+            </div>
         </div>
     )
 }

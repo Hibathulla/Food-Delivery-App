@@ -1,10 +1,16 @@
+import { Fragment } from "react";
+import ReactDom from "react-dom";
 import { useContext } from "react";
 import CartItems from "./CartItems";
 import FoodContext from "../../store/food-context";
 
 import classes from "./Cart.module.scss";
 
-const Cart = () => {
+const Backdrop = (props) => {
+  return <div className={classes.backdrop} onClick={props.onClick}></div>
+}
+
+const Cart = (props) => {
 
   const ctx = useContext(FoodContext)
 
@@ -20,7 +26,13 @@ ctx.addItem({...item, amount: 1})
       <h2 className={classes.cart__heading}>Shopping Cart</h2>
     </div>
     <div className={classes.cart__bottom}>
-      <CartItems />
+    {ctx.items.map(item => (
+      <CartItems
+       name={item.name}
+       img={item.img}
+       price={item.price}
+       />
+    ))}
     </div>
 
 
@@ -35,8 +47,25 @@ ctx.addItem({...item, amount: 1})
       onAdd={onAddHandler.bind(null, item)}
        /></li>
     ))} */}
+    <button className={classes.cart__confirm}>Confirm</button>
     </section>
   );
-};
+}
 
-export default Cart;
+const CartModal = (props) => {
+  return <Fragment>
+      {ReactDom.createPortal(
+        <Backdrop onClick={props.onClick} />,
+        document.getElementById("backdrop-root")
+      )}
+
+      {ReactDom.createPortal(
+        <Cart />,
+        document.getElementById("overlay-root")
+      )}
+  </Fragment>
+}
+
+
+
+export default CartModal;

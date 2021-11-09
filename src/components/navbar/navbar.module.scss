@@ -51,13 +51,33 @@
         font-size: 1.8rem;
     }
 
+    &__carticon {
+        position: relative;
+        cursor: pointer;
+        border: none;
+        background: none;
+    }
+
     &__bag {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
+    }
+
+    &__bagno {
+        position: absolute;
+        top: 7%;
+        right: 14%;
+        width: 1.9rem;
+        height: 1.9rem;
+        text-align: center;
+        color: white;
+        border-radius: 50%;
+        font-size: 1.4rem;
+        background-color: #DE2B42;
     }
 
     &__button {
         text-decoration: none;
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         padding: 1.2rem 1.4rem;
         color: #fff;
         background-color: #DE2B42;

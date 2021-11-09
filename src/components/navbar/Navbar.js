@@ -4,7 +4,7 @@ import { FaSearch } from "react-icons/fa"
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { useContext } from "react";
 
-const Navbar = () => {
+const Navbar = (props) => {
 
     const ctx = useContext(FoodContext)
 
@@ -27,7 +27,12 @@ const Navbar = () => {
         </nav>
         <div className={classes.header__icons}>
         <FaSearch className={classes.header__search} />
+
+        <button className={classes.header__carticon} onClick={props.setCart}>
         <MdOutlineShoppingBag className={classes.header__bag} />
+        <div className={classes.header__bagno}>{numberItems}</div>
+        </button>
+        
         <a href="#" className={classes.header__button}>Contact us</a>
         </div>
         </header>

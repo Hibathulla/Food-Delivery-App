@@ -26,19 +26,19 @@ const FoodCategory = () => {
     </div>
 
     <button className={classes.category__box} value="All Menu" onClick={clickHandler}>
-     <span className={classes.category__name}>All Menu</span>
+     All Menu
     </button>
 
      <button className={classes.category__box} value="Breakfast" onClick={clickHandler}>
-     <span className={classes.category__name}>Breakfast</span>
+     Breakfast
     </button>
 
     <button className={classes.category__box} value="Lunch" onClick={clickHandler}>
-     <span className={classes.category__name}>Lunch</span>
+     Lunch
     </button>
 
     <button className={classes.category__box} value="Dinner" onClick={clickHandler}>
-     <span className={classes.category__name}>Dinner</span>
+     Dinner
     </button>
     
     </section>

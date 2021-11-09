@@ -10,7 +10,7 @@ const Home = (props) => {
   }
 
   return <section className={classes.home} id="home">
-  <Navbar />
+  <Navbar setCart={props.cartToRoot} />
   <div className={classes.home__content}>
       <div className={classes.home__left}>
 
