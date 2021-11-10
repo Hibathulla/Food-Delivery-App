@@ -2,9 +2,17 @@ import FoodContext from "../../store/food-context";
 import classes from "./navbar.module.scss"
 import { FaSearch } from "react-icons/fa"
 import { MdOutlineShoppingBag } from "react-icons/md";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 const Navbar = (props) => {
+
+    const [scroll, setScroll] = useState(false)
+
+    window.onscroll = () => {
+        setScroll(window.pageYOffset === 0 ? false : true)
+        return () => window.onscroll = null
+    }
+    console.log(scroll);
 
     const ctx = useContext(FoodContext)
 
@@ -14,6 +22,13 @@ const Navbar = (props) => {
 
     return (
         <header className={classes.header}>
+
+        {scroll && <button className={classes.header__windscroll} onClick={props.setCart}>
+        <h3>Cart</h3>
+        <MdOutlineShoppingBag className={classes.header__bag} />
+        <div className={classes.header__bagno2}>{numberItems}</div>
+        </button>}
+
         <div className={classes.header__titlebox}>
         <h1 className={classes.header__title}>Fudo</h1>
         </div>
@@ -33,7 +48,7 @@ const Navbar = (props) => {
         <div className={classes.header__bagno}>{numberItems}</div>
         </button>
         
-        <a href="#" className={classes.header__button}>Contact us</a>
+        <button  className={classes.header__button}>Contact us</button>
         </div>
         </header>
     )

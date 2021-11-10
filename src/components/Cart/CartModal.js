@@ -4,7 +4,7 @@ import { useContext } from "react";
 import CartItems from "./CartItems";
 import FoodContext from "../../store/food-context";
 
-import classes from "./Cart.module.scss";
+import classes from "./CartModal.module.scss";
 
 const Backdrop = (props) => {
   return <div className={classes.backdrop} onClick={props.onClick}></div>
