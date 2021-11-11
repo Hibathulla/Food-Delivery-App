@@ -24,8 +24,8 @@ const CartItems = (props) => {
            
 
             <div className={classes.items__quantity}>
-                <button className={classes.items__btnplus}>+</button>
-                <div className={classes.items__number}>1</div>
+                <button className={classes.items__btnplus} onClick={props.onAdd}>+</button>
+                <div className={classes.items__number}>{ctx.items.amount}</div>
                 <button className={classes.items__btnminus}>-</button>
             </div>
         </div>

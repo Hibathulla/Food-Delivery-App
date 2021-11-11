@@ -1,23 +1,13 @@
-.backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(black, 0.9);
-    z-index: 999;
-}
-.cart {
+.checkout {
+    height: 95vh;
+    width: 55%;
     position: fixed;
     top: 5vh;
-    left: 20%;
-    width: 55%;
-    height: 95vh;
-    margin: 0 auto;
     background-color: white;
-    border-radius: 14px;
-    text-align: center;
+    left: 20%;
     overflow: hidden;
+    text-align: center;
+    border-radius: 14px;
     z-index: 9999;
 
     &__top {
@@ -39,6 +29,7 @@
         width: 90%;
         height: 40rem;
         padding: 2rem;
+        text-align: left;
         overflow-y: auto;
         background-color: #FEF5ED;
         margin: -9rem auto 0 auto;

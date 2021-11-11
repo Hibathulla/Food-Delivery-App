@@ -1,7 +1,10 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import ReactDom from "react-dom";
 import { useContext } from "react";
+
 import CartItems from "./CartItems";
+import Checkout from "./Checkout";
+
 import FoodContext from "../../store/food-context";
 
 import classes from "./CartModal.module.scss";
@@ -31,6 +34,7 @@ ctx.addItem({...item, amount: 1})
        name={item.name}
        img={item.img}
        price={item.price}
+       onAdd={onAddHandler.bind(null, item)}
        />
     ))}
     </div>
@@ -47,12 +51,19 @@ ctx.addItem({...item, amount: 1})
       onAdd={onAddHandler.bind(null, item)}
        /></li>
     ))} */}
-    <button className={classes.cart__confirm}>Confirm</button>
+    <button className={classes.cart__confirm} onClick={props.checkout}>Confirm</button>
     </section>
   );
 }
 
 const CartModal = (props) => {
+
+  const [checkout, setCheckout] = useState(false)
+
+  const checkoutHandler = () => {
+    setCheckout(true);
+  }
+
   return <Fragment>
       {ReactDom.createPortal(
         <Backdrop onClick={props.onClick} />,
@@ -60,7 +71,7 @@ const CartModal = (props) => {
       )}
 
       {ReactDom.createPortal(
-        <Cart />,
+        checkout ? <Checkout /> : <Cart checkout={checkoutHandler} />,
         document.getElementById("overlay-root")
       )}
   </Fragment>
