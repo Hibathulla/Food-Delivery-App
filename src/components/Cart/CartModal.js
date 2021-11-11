@@ -34,9 +34,11 @@ ctx.addItem({...item, amount: 1})
        name={item.name}
        img={item.img}
        price={item.price}
+       amount={item.amount}
        onAdd={onAddHandler.bind(null, item)}
        />
     ))}
+    <h2 className={classes.cart__bottom_amount}>Total Amount: {ctx.amount}</h2>
     </div>
 
 

@@ -35,7 +35,7 @@
     }
 
     &__bottom {
-        text-align: left;
+        // text-align: left;
         width: 90%;
         height: 40rem;
         padding: 2rem;
@@ -43,6 +43,11 @@
         background-color: #FEF5ED;
         margin: -9rem auto 0 auto;
         border-radius: 10px;
+
+        &_amount {
+            font-size: 2.4rem;
+            margin: 0 auto;
+        }
     }
 
     &__confirm {
