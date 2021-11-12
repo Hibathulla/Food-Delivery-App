@@ -1,4 +1,3 @@
-import Card from "../UI/Card";
 import classes from "./CartItems.module.scss"
 import { useContext } from "react";
 import FoodContext from "../../store/food-context";

@@ -1,14 +1,9 @@
 import { useContext } from "react";
 import classes from "./FoodCategory.module.scss";
 
-import Food from "../Food/Food";
-
 import FoodContext from "../../store/food-context.js";
 
 const FoodCategory = () => {
-
-  const category = new Set(Food.map((food) => food.category));
-  const categories = ["All Menu", ...category]
 
   const ctx = useContext(FoodContext);
 

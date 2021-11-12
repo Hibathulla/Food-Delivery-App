@@ -5,10 +5,6 @@ import classes from "./home.module.scss"
 
 const Home = (props) => {
 
-  const homeHandler = () => {
-      props.homeHandler(true)
-  }
-
   return <section className={classes.home} id="home">
   <Navbar setCart={props.cartToRoot} />
   <div className={classes.home__content}>
