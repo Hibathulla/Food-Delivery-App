@@ -2,11 +2,12 @@ import FoodContext from "../../store/food-context";
 import classes from "./navbar.module.scss"
 import { FaSearch } from "react-icons/fa"
 import { MdOutlineShoppingBag } from "react-icons/md";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 const Navbar = (props) => {
 
-    const [scroll, setScroll] = useState(false)
+    const [scroll, setScroll] = useState(false);
+    const [btn, setBtn] = useState(false);
 
     window.onscroll = () => {
         setScroll(window.pageYOffset === 0 ? false : true)
@@ -20,13 +21,23 @@ const Navbar = (props) => {
         return curNumber + item.amount;
     }, 0)
 
+    useEffect(() => {
+        if(ctx.items === 0) {
+            setBtn(false)
+        }
+        setBtn(true)
+        setTimeout(() => {
+            setBtn(false)
+        }, 300)
+    }, [ctx.items])
+
     return (
         <header className={classes.header}>
 
-        {scroll && <button className={classes.header__windscroll} onClick={props.setCart}>
-        <h3>Cart</h3>
+        {scroll && 
+        <button className={classes.header__windscroll} onClick={props.setCart}>
         <MdOutlineShoppingBag className={classes.header__bag} />
-        <div className={classes.header__bagno2}>{numberItems}</div>
+        <div className={`${classes.header__bagno2} ${btn ? classes.header__bump : ""}`}>{numberItems}</div>
         </button>}
 
         <div className={classes.header__titlebox}>
