@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import classes from "./Checkout.module.scss"
 
-const Checkout = () => {
+const Checkout = (props) => {
 
     const nameRef = useRef();
   const streetRef = useRef();
@@ -17,6 +17,14 @@ const Checkout = () => {
         const enteredPostal = postalRef.current.value; 
 
         console.log(enteredName, enteredCity, enteredStreet, enteredPostal);
+
+        const submittedData = {
+            enteredName,
+            enteredCity,
+            enteredStreet,
+            enteredPostal
+        }
+        props.onOrder(submittedData)
     }
 
     return (
@@ -35,17 +43,17 @@ const Checkout = () => {
         </div>
 
         <div className={classes.checkout__formGroup}>
-        <label className={classes.checkout__label} for="street">street</label>
+        <label className={classes.checkout__label} htmlFor="street">street</label>
         <input className={classes.checkout__input} ref={streetRef} type="text" autoComplete="off" id="street" />
         </div>
 
         <div className={classes.checkout__formGroup}>
-        <label className={classes.checkout__label} for="city">city</label>
+        <label className={classes.checkout__label} htmlFor="city">city</label>
         <input className={classes.checkout__input} ref={cityRef} type="text" autoComplete="off" id="city" />
         </div>
 
         <div className={classes.checkout__formGroup}>
-        <label className={classes.checkout__label} for="pin">Postal code</label>
+        <label className={classes.checkout__label} htmlFor="pin">Postal code</label>
         <input className={classes.checkout__input} type="text" ref={postalRef} autoComplete="off" id="pin" />
         </div>
     </div>

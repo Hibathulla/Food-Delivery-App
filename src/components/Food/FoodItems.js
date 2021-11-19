@@ -20,7 +20,7 @@ useEffect(() => {
 }, [setItem ,ctx.context, category])
 
   return (
-    <section className={classes.container}>
+    <section className={classes.container} id="menu">
       {items.map((item) => (
         <SingleFood
         key={item.id}

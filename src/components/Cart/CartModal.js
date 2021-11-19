@@ -21,8 +21,6 @@ const Cart = (props) => {
 ctx.addItem({...item, amount: 1})
   }
 
-  console.log(ctx.items)
-
   return (
     <section className={classes.cart}>
     <div className={classes.cart__top}>
@@ -62,8 +60,20 @@ const CartModal = (props) => {
 
   const [checkout, setCheckout] = useState(false)
 
+  const ctx = useContext(FoodContext)
+
   const checkoutHandler = () => {
     setCheckout(true);
+  }
+
+  const submitHandler = (userDetails) => {
+    fetch("https://food-delivery-app-4d49c-default-rtdb.firebaseio.com/order.json", {
+      method: "POST",
+      body: JSON.stringify({
+        user: userDetails,
+        orderedItems: ctx.items
+      })
+    })
   }
 
   return <Fragment>
@@ -73,7 +83,7 @@ const CartModal = (props) => {
       )}
 
       {ReactDom.createPortal(
-        checkout ? <Checkout /> : <Cart checkout={checkoutHandler} />,
+        checkout ? <Checkout onOrder={submitHandler} /> : <Cart checkout={checkoutHandler} />,
         document.getElementById("overlay-root")
       )}
   </Fragment>

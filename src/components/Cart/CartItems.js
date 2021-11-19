@@ -6,10 +6,6 @@ const CartItems = (props) => {
 
   const ctx = useContext(FoodContext);  
 
-  const removeHandler = () => {
-       ctx.removeItem(props.id)
-  }
-
     return (
         <div className={classes.items}>
             <div className={classes.items__imagebox}>

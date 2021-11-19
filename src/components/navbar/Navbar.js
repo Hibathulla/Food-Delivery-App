@@ -45,10 +45,10 @@ const Navbar = (props) => {
         </div>
         <nav>
             <ul className={classes.nav__ul}>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#category">Category</a></li>
-                <li><a>Menu</a></li>
-                <li><a>Footer</a></li>
+                {/* <li><a href="/#home">Home</a></li>
+                <li><a href="/#category">Category</a></li>
+                <li><a a href="/#menu">Menu</a></li>
+                <li><a>Footer</a></li> */}
             </ul>
         </nav>
         <div className={classes.header__icons}>

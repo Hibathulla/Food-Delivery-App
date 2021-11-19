@@ -14,7 +14,7 @@ const Home = (props) => {
           <h2 className={classes.home__title1}>Delciuous Food</h2>
           <h2 className={classes.home__title2}>Served right to you</h2>
         </div>
-        <a href="" className={classes.home__button}>Explore Menu</a>
+        <a href="/#menu" className={classes.home__button}>Explore Menu</a>
       </div>
 
       <div className={classes.home__right}>
