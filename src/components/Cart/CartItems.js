@@ -1,10 +1,6 @@
 import classes from "./CartItems.module.scss"
-import { useContext } from "react";
-import FoodContext from "../../store/food-context";
 
 const CartItems = (props) => {
-
-  const ctx = useContext(FoodContext);  
 
     return (
         <div className={classes.items}>
@@ -21,7 +17,7 @@ const CartItems = (props) => {
             <div className={classes.items__quantity}>
                 <button className={classes.items__btnplus} onClick={props.onAdd}>+</button>
                 <div className={classes.items__number}>{props.amount}</div>
-                <button className={classes.items__btnminus}>-</button>
+                <button className={classes.items__btnminus} onClick={props.onRemove}>-</button>
             </div>
         </div>
     )
