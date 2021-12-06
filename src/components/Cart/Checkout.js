@@ -25,7 +25,7 @@ const Checkout = (props) => {
             enteredPostal
         }
         props.onOrder(submittedData)
-    
+        
     }
 
     return (

@@ -11,8 +11,8 @@ const Home = (props) => {
       <div className={classes.home__left}>
 
         <div className={classes.home__textbox}>
-          <h2 className={classes.home__title1}>Delicious Food</h2>
-          <h2 className={classes.home__title2}>Served right to you</h2>
+          <h2 className={classes.home__title}>Delicious Food</h2>
+          <h2 className={classes.home__subtitle}>Served right to you</h2>
         </div>
         <a href="/#menu" className={classes.home__button}>Explore Menu</a>
       </div>
